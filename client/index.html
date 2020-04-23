@@ -6,11 +6,16 @@
     <title>Web Chat</title>
     <script type="text/javascript" src="/socket.io/socket.io.js"></script>
     <script src="main.js"></script>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
     <h1>Web Chat</h1>
     <div id="messages">
-
     </div>
+    <form onsubmit="return addMessage(this);">
+        <input id="nickname" type="text" placeholder="Nickname"/>
+        <textarea id="text" placeholder="Message.. "></textarea>
+        <input type="submit" value="Enviar">
+    </form>
 </body>
 </html>

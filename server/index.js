@@ -10,16 +10,23 @@ app.get('/hola-mundo',function (req,res) {
     res.status(200).send('Hola mundo desde una ruta');
 });
 
-var message = [{
+var messages = [{
     id:1,
     text: "Bienvedo al chat privado de Socket.io y NodeJS de Luis Alejandro Jaramillo",
     nickname: 'Bot - LuisAlejandroJaramillo'
 }];
 
 //Permite lanzar eventos, abrimos una coneccion al Socket
-io.on('connection',function (socket) {
+io.on('connection',function(socket) {
     console.log("El nodo con IP:" + socket.handshake.address+" se ha conectado...");
-    socket.emit('message',message);
+    socket.emit('messages',messages);
+
+    socket.on('add-message',function (data) {
+        messages.push(data);
+        io.sockets.emit('messages',messages);
+    });
+
+
 });
 
 server.listen(6677,function () {
