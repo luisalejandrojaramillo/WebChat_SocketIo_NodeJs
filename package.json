@@ -1,0 +1,27 @@
+{
+  "name": "webchat_socketio_nodejs",
+  "version": "1.0.0",
+  "description": "Proyecto de chat con Node y Socket.io",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luisalejandrojaramillo/WebChat_SocketIo_NodeJs.git"
+  },
+  "author": "Luis Alejandro Jaramillo R",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luisalejandrojaramillo/WebChat_SocketIo_NodeJs/issues"
+  },
+  "homepage": "https://github.com/luisalejandrojaramillo/WebChat_SocketIo_NodeJs#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
