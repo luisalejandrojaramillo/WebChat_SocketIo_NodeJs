@@ -31,6 +31,7 @@ function addMessage(e) {
     };
     //Para que no se pueda cambiar el user
     document.getElementById('nickname').style.display='none';
+    //document.getElementById('text').reset();
     socket.emit('add-message',message);
     return false;
 }
